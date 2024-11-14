@@ -20,5 +20,4 @@ public class Album {
     private LocalDate releaseDate; // Date de sortie
     private String status; // Statut de disponibilité ("disponible" ou "emprunter")
 
-    // Getters et Setters : méthodes pour accéder et modifier les propriétés
 }

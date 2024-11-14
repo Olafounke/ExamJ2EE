@@ -17,13 +17,13 @@ public class AlbumController {
     @GetMapping
     public String listAlbums(Model model) {
         model.addAttribute("albums", albumService.findAll());
-        return "albums/list"; // Page HTML à créer
+        return "albums/list";
     }
 
     @GetMapping("/create")
     public String showCreateForm(Model model) {
         model.addAttribute("album", new Album());
-        return "albums/create"; // Page HTML à créer
+        return "albums/create"; 
     }
 
     @PostMapping("/save")
