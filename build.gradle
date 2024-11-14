@@ -17,11 +17,28 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Spring Boot Starter pour l'application web
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // Spring Boot Starter pour JPA (accès aux données et ORM)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Spring Boot Starter pour Thymeleaf (moteur de templates pour les vues HTML)
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // Spring Boot Starter pour les services Web et les contrôleurs REST
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Dépendance pour la base de données H2 en mémoire (pour le développement et les tests)
+    runtimeOnly 'com.h2database:h2'
+
+    // Spring Boot Starter pour les tests
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()
